@@ -41,25 +41,22 @@ class Runner
       # Get the various contact attributes from the user and store them to variables
       # Insert those variables in a new contact and add them to the database
     when "modify"
-      db.modify_contact(selection, attribute, modification)
-      # puts "select an attribute"
-      # attribute = gets.chomp
-      # puts @@contacts_array
-      # if @@contacts_array.include?(attribute)
-      #   attribute = selection
-      # else
-      #   puts "Please select: first name, last name, id, email or notes."
-      # end
+      #db.modify_contact(selection, attribute, modification)
+      puts "select an attribute"
+      attribute = gets.chomp
+      else
+        puts "Please select: first name, last name, id, email or notes."
+      end
 
-      # puts "are you sure that is right?"
-      # if "yes"
-      #   puts "please type in new value"
-      #   modification = gets.chomp
-      # elsif "no"
-      #   puts "please type in new value"
-      #   modification = gets.chomp
-      # end
-      #   db.modify_contact(selection, attribute, modification)
+      puts "are you sure that is right?"
+      if "yes"
+        puts "please type in new value"
+        modification = gets.chomp
+      elsif "no"
+        puts "please type in new value"
+        modification = gets.chomp
+      end
+        db.modify_contact(selection, attribute, modification)
 
 
 

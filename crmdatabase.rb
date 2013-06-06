@@ -11,7 +11,6 @@ class Database
 
 	def add(contact)
 		@contacts_array << contact
-		puts "#{@contacts_array}"
 	end
 
 	def modify_contact(selection, attribute, modification)

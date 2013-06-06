@@ -11,7 +11,7 @@ class Contact
 	end
 
 	def display_contact
-		puts id
+		record = 
 	end
 end
 
