@@ -7,18 +7,21 @@ id = 1000
 
 # Display the crm greeting
 
+  @database_session = Database.new()
+
 loop do
 	puts ""
 	puts "Welcome to the cool CRM tool"
 	puts ""
   puts "type |add| or |display all| or |display attribute| or |delete| or |exit| to execute a command"
 
-
-
   input = gets.chomp
 
   case input
   when "add"
+    puts ""
+    database.add
+
     # Get the various contact attributes from the user and store them to variables
     # Insert those variables in a new contact and add them to the database
   when "modify"
@@ -45,7 +48,6 @@ loop do
     # Exit from the program
   	break
   end
-  puts "hi"
 end
 
 
@@ -95,7 +97,7 @@ end
 # userinput = gets.chomp
 
 # if user types "add", user gets.chomps first name, gets.chomps last name, 
-# gets.chomps email, and gets.chompsnotes
+# gets.chomps email, and gets.chomps notes
 
 # if user types "modify", user can modify id, firstname, lastname, email, and notes
 # 		if an attribute is selected, program asks "yes" or "no" to confirm selection
