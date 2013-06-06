@@ -11,33 +11,43 @@ class Database
 
 	def add(contact)
 		@contacts_array << contact
+
 	end
 
-	def modify_contact(selection, attribute, modification)
-		puts "select an attribute"
-      	attribute = gets.chomp
+	# def modify_contact(selection, attribute, modification)
+		# puts "select an attribute"
+  #     	attribute = gets.chomp
 
-      if @contacts_array.include?(attribute)
-        	attribute = selection
-      else
-        puts "Please select: first name, last name, id, email or notes."
-      end
+  #     if @contacts_array.include?(attribute)
+  #       	attribute = selection
+  #     else
+  #       puts "Please select: first name, last name, id, email or notes."
+  #     end
 
-      puts "are you sure that is right?"
-      if "yes"
-        puts "please type in new value"
-        modification = gets.chomp
-      else "no"
-        puts "please type in new value"
-        modification = gets.chomp
-      end
-	end
+  #     puts "are you sure that is right?"
+  #     if "yes"
+  #       puts "please type in new value"
+  #       modification = gets.chomp
+  #     else "no"
+  #       puts "please type in new value"
+  #       modification = gets.chomp
+	# end
 
 	def display_all_contacts
 
 	end
 
-	def display_particular_contact(attribute)
+	def display_particular_contact(id)
+		# puts "which contact id would you like to display?"
+		# id = gets.chomp
+		@contacts_array.each { |i|
+			if i.id == id
+				puts i.display_contact
+			else
+				puts "no records found"
+			end }
+		
+
 
 	end
 

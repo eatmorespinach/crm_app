@@ -4,7 +4,7 @@ require_relative "crmdatabase"
 class Runner
 
   db = Database.new
-  id = 1000
+  #id = 1000
 
   # Display the crm greeting
 
@@ -15,8 +15,8 @@ class Runner
     
 
   loop do
-  	
-    puts "type |add| or |modify| or |display all| or |display attribute| or |delete| or |exit| to execute a command"
+  	# db.modify_contact()
+    puts "type |add| or |modify| or |display all| or |display contact| or |display attribute| |delete| or |exit| to execute a command"
 
     input = gets.chomp
 
@@ -36,27 +36,35 @@ class Runner
       db.add(Contact.new(id, firstname, lastname, email, notes))
       puts ""
 
-      
-
       # Get the various contact attributes from the user and store them to variables
       # Insert those variables in a new contact and add them to the database
-    when "modify"
-      #db.modify_contact(selection, attribute, modification)
-      puts "select an attribute"
-      attribute = gets.chomp
-      else
-        puts "Please select: first name, last name, id, email or notes."
-      end
+    
 
-      puts "are you sure that is right?"
-      if "yes"
-        puts "please type in new value"
-        modification = gets.chomp
-      elsif "no"
-        puts "please type in new value"
-        modification = gets.chomp
-      end
-        db.modify_contact(selection, attribute, modification)
+    when "modify"
+      # puts "select an attribute"
+      # attribute = gets.chomp
+      # @contacts_array.each { |x| 
+      #   if x.attribute == "firstname"
+      #     puts "hi this is modify"
+      #   else
+      #     puts "not first name"
+      #   end }
+
+      #     attribute = selection
+      # else
+      #   puts "Please select: first name, last name, id, email or notes."
+      #     attribute = gets.chomp
+      # end
+
+      # puts "are you sure that is right?"
+      # if "yes"
+      #   puts "please type in new value"
+      #   modification = gets.chomp
+      # else "no"
+      #   puts "please type in new value"
+      #   modification = gets.chomp
+      # end
+        # db.modify_contact(selection, attribute, modification)
 
 
 
@@ -67,6 +75,9 @@ class Runner
     when "display all"
       # Display all of the contacts in the database to the user
     when "display contact"
+      puts "which contact id would you like to display?"
+        id = gets.chomp
+        db.display_particular_contact(id)
       # Prompt the user to select a contact by a specific contact attribute (E.g. Khurram)
       # Store the input in a variable and display the corresponding contact
     when "display attribute"
