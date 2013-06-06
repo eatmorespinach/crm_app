@@ -16,7 +16,7 @@ class Contact
 end
 
 
-
+#write method that checks to make sure every attribute has had a value input
 
 
 
