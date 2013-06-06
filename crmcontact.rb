@@ -3,7 +3,7 @@
 class Contact
 	attr_accessor :id, :firstname, :lastname, :email, :notes
 
-	def initialize(id="1", firstname="zena", lastname="bielewicz", email="email", notes="notes") 
+	def initialize(id, firstname, lastname, email, notes) 
 		@id = id
 		@firstname = firstname 
 		@lastname = lastname
@@ -12,11 +12,7 @@ class Contact
 	end
 
 	def display_contact
-		puts
-		puts
 		["id: #{@id}", "first name: #{@firstname}", "last name: #{@lastname}", "email: #{@email}", "notes: #{@notes}"]
-		puts
-		puts
 	end
 end
 

@@ -34,7 +34,9 @@ class Database
 	# end
 
 	def display_all_contacts
-
+		@contacts_array.each do |i|
+			puts ["\n \nid: #{i.id}", "first name: #{i.firstname}", "last name: #{i.lastname}", "email: #{i.email}", "notes: #{i.notes}\n \n\n"]
+		end
 	end
 
 	def display_particular_contact(id)
@@ -42,9 +44,17 @@ class Database
 		# id = gets.chomp
 		@contacts_array.each { |i|
 			if i.id == id
+				puts
+				puts
 				puts i.display_contact
+				puts
+				puts
 			else
+				puts
+				puts
 				puts "no records found"
+				puts
+				puts
 			end }
 		
 

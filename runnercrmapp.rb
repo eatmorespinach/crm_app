@@ -73,9 +73,10 @@ class Runner
       # If 'yes', prompt them to type the new value for the attribute
       # Display that the contact was successfully updated to the user 
     when "display all"
+      db.display_all_contacts
       # Display all of the contacts in the database to the user
     when "display contact"
-      puts "which contact id would you like to display?"
+      puts "which contact id would you like to display?"  
         id = gets.chomp
         db.display_particular_contact(id)
       # Prompt the user to select a contact by a specific contact attribute (E.g. Khurram)
