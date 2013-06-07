@@ -41,31 +41,16 @@ class Runner
     
 
     when "modify"
-      # puts "select an attribute"
-      # attribute = gets.chomp
-      # @contacts_array.each { |x| 
-      #   if x.attribute == "firstname"
-      #     puts "hi this is modify"
-      #   else
-      #     puts "not first name"
-      #   end }
+      puts "which attribute do you want to modify?"
+      attribute = gets.chomp
+      puts "enter yes if you're sure. Enter no if not."
+      choice = gets.chomp
 
-      #     attribute = selection
-      # else
-      #   puts "Please select: first name, last name, id, email or notes."
-      #     attribute = gets.chomp
-      # end
-
-      # puts "are you sure that is right?"
-      # if "yes"
-      #   puts "please type in new value"
-      #   modification = gets.chomp
-      # else "no"
-      #   puts "please type in new value"
-      #   modification = gets.chomp
-      # end
-        # db.modify_contact(selection, attribute, modification)
-
+      if choice == "yes"
+        puts "what value do you want to change it to?"
+        new_attribute = gets.chomp
+        db.modify_contact(attribute, new_attribute)
+      end
 
 
       # Prompt the user to select an attribute
@@ -113,67 +98,5 @@ end
 Runner.new()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# puts "add"
-
-# puts "modify"
-
-# puts "display all"
-
-# puts "display contact"
-
-# puts "display attribute"
-
-# puts "delete"
-
-# puts "exit"
-
-
-# userinput = gets.chomp
-
-# if user types "add", user gets.chomps first name, gets.chomps last name, 
-# gets.chomps email, and gets.chomps notes
-
-# if user types "modify", user can modify id, firstname, lastname, email, and notes
-# 		if an attribute is selected, program asks "yes" or "no" to confirm selection
-# 			if "yes" is typed, then that field can changed then modified. 
-# 			if "no" is typed, goes back to main menu. 
-
-# if use types "display all", user shown all contacts that that exist under that session. 
-
-# if "display contact" is typed, you shown a particular contact
-
-# if "display attribute" is typed, promted to enter an attribute. That attribute should be 
-# 	displayed to the screen across all records
-
-# if "delete is typed", cpu asks which attribute to be deleted. 
-
-# if "exit" is typed, program exits and returns to command line. 
 
 

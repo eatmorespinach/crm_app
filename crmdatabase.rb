@@ -14,24 +14,22 @@ class Database
 
 	end
 
-	# def modify_contact(selection, attribute, modification)
-		# puts "select an attribute"
-  #     	attribute = gets.chomp
+	def modify_contact(attribute, new_attribute)
+			@contacts_array.each { |i|
+			if attribute == "first name" 
+			i.firstname = new_attribute
 
-  #     if @contacts_array.include?(attribute)
-  #       	attribute = selection
-  #     else
-  #       puts "Please select: first name, last name, id, email or notes."
-  #     end
+			elsif attribute == "last name" 
+				i.lastname = new_attribute
+			elsif attribute == "email" 
+				i.email = new_attribute
+			elsif attribute == "notes" 
+				i.notes = new_attribute
+			else
+				puts "no attributes found"
+			end }
 
-  #     puts "are you sure that is right?"
-  #     if "yes"
-  #       puts "please type in new value"
-  #       modification = gets.chomp
-  #     else "no"
-  #       puts "please type in new value"
-  #       modification = gets.chomp
-	# end
+	end
 
 	def display_all_contacts
 		@contacts_array.each do |i|
