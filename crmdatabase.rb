@@ -37,11 +37,9 @@ class Database
 		end
 	end
 
-	def display_particular_contact(id)
-		# puts "which contact id would you like to display?"
-		# id = gets.chomp
+	def display_particular_contact(name)
 		@contacts_array.each { |i|
-			if i.id == id
+			if i.firstname == name
 				puts
 				puts
 				puts i.display_contact

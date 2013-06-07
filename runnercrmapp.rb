@@ -27,13 +27,13 @@ class Runner
       firstname = gets.chomp
       puts "type your last name:"
       lastname = gets.chomp
-      puts "type your id:"
-      id = gets.chomp
+      #puts "type your id:"
+     # id = gets.chomp
       puts "type your email:"
       email = gets.chomp
       puts "type your notes:"
       notes = gets.chomp
-      db.add(Contact.new(id, firstname, lastname, email, notes))
+      db.add(Contact.new(firstname, lastname, email, notes))
       puts ""
 
       # Get the various contact attributes from the user and store them to variables
@@ -61,9 +61,9 @@ class Runner
       db.display_all_contacts
       # Display all of the contacts in the database to the user
     when "display contact"
-      puts "which contact id would you like to display?"  
-        id = gets.chomp
-        db.display_particular_contact(id)
+      puts "which contact first name would you like to display?"  
+        name = gets.chomp
+        db.display_particular_contact(name)
       # Prompt the user to select a contact by a specific contact attribute (E.g. Khurram)
       # Store the input in a variable and display the corresponding contact
     when "display attribute"

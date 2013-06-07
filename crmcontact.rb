@@ -1,10 +1,11 @@
 
 
 class Contact
-	attr_accessor :id, :firstname, :lastname, :email, :notes
+	attr_accessor :firstname, :lastname, :email, :notes, :id
 
-	def initialize(id, firstname, lastname, email, notes) 
-		@id = id
+	@@new_id = 0
+	def initialize(firstname, lastname, email, notes) 
+		@id = id_counter
 		@firstname = firstname 
 		@lastname = lastname
 		@email = email
@@ -12,14 +13,11 @@ class Contact
 	end
 
 	def display_contact
-		["id: #{@id}", "first name: #{@firstname}", "last name: #{@lastname}", "email: #{@email}", "notes: #{@notes}"]
+		["first name: #{@firstname}", "last name: #{@lastname}", "email: #{@email}", "notes: #{@notes}"]
+	end
+
+	def id_counter
+		@@new_id += 1
 	end
 end
-
-# c = Contact.new
-# puts c.display_contact
-
-#write method that checks to make sure every attribute has had a value input
-
-
 
