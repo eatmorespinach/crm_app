@@ -57,11 +57,21 @@ class Database
 				puts
 			end }
 		
-
-
 	end
 
 	def display_info_by_attribute(arg)
+		@contacts_array.each { |i|
+			if arg == "first name" 
+				puts i.firstname
+			elsif arg == "last name" 
+				puts i.lastname
+			elsif arg == "email" 
+				puts i.emaiil
+			elsif arg == "notes" 
+				puts i.notes
+			else
+				puts "no attributes found"
+			end }
 
 	end
 	def delete_contact(attribute)
