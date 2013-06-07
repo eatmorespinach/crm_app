@@ -74,7 +74,13 @@ class Database
 			end }
 
 	end
-	def delete_contact(attribute)
+	def delete_contact(firstname)
+		@contacts_array.each { |i|
+			if i.firstname == firstname
+				@contacts_array.shift 
+				#delete the entire contact out of array. 
+			else "no attriutes found"
+			end}
 
 	end
 end

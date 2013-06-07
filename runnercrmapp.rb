@@ -88,6 +88,15 @@ class Runner
       # Prompt the user to search the database by one of the five attributes (E.g. "ID")
       # Display all of the the contacts by that attribute
     when "delete"
+      puts "which first name do you want to delete?"
+      firstname = gets.chomp
+      puts "enter yes if you're sure. Enter no if not."
+      choice = gets.chomp
+
+      if choice == "yes"
+        db.delete_contact(firstname)
+      end
+      puts "successfully deleted user."
       # Prompt the user to select a contact by a specific contact attribute (E.g. Khurram)
       # Store the input in a variable and display a prompt to confirm "yes" or "no"
       # If 'yes', prompt them to type the new value for the attribute
