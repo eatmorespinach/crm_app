@@ -4,7 +4,7 @@ require_relative "crmdatabase"
 class Runner
 
   db = Database.new
-  #id = 1000
+ 
 
   # Display the crm greeting
 
@@ -27,8 +27,8 @@ class Runner
       firstname = gets.chomp
       puts "type your last name:"
       lastname = gets.chomp
-      #puts "type your id:"
-     # id = gets.chomp
+  
+  
       puts "type your email:"
       email = gets.chomp
       puts "type your notes:"

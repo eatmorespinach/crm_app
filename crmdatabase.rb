@@ -18,7 +18,6 @@ class Database
 			@contacts_array.each { |i|
 			if attribute == "first name" 
 			i.firstname = new_attribute
-
 			elsif attribute == "last name" 
 				i.lastname = new_attribute
 			elsif attribute == "email" 
